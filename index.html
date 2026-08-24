@@ -401,6 +401,14 @@
       
       <img id="qr-img" src="" alt="Mã QR Thanh Toán" style="max-width:100%; border-radius:8px; margin-bottom:16px;" />
       
+      <div style="background:rgba(40,65,57,0.05); padding:16px; border-radius:8px; text-align:left; font-size:14px; color:#284139; margin-bottom:16px; border: 1px dashed #809076;">
+        <div style="margin-bottom:8px"><strong>Ngân hàng:</strong> MBBank</div>
+        <div style="margin-bottom:8px"><strong>Số tài khoản:</strong> 0362722725</div>
+        <div style="margin-bottom:8px"><strong>Tên tài khoản:</strong> HONG THIEN Y</div>
+        <div style="margin-bottom:8px"><strong>Số tiền:</strong> 4.930.000 VNĐ</div>
+        <div><strong>Nội dung CK:</strong> <strong style="color:#B86830; font-size:18px; user-select: all;" id="qr-order-id">...</strong></div>
+      </div>
+      
       <div id="qr-status" style="color:#B86830; font-weight:600; font-size:15px; display:flex; align-items:center; justify-content:center; gap:8px;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;">
           <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
@@ -455,8 +463,9 @@
         const result = await response.json();
 
         if (result.success) {
-          // Hiển thị Modal QR
+          // Hiển thị Modal QR và thông tin CK thủ công
           document.getElementById('qr-img').src = result.qrUrl;
+          document.getElementById('qr-order-id').textContent = result.orderId;
           document.getElementById('qr-modal').style.display = 'flex';
           
           // Trạng thái thành công ở Form
