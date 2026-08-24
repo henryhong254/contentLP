@@ -953,14 +953,16 @@ select.form-control option {
   .hero__sub { font-size: 14.5px; margin-bottom: 24px; }
   .hero__invest-row { flex-direction: column; border-radius: var(--radius-md); padding: 16px; gap: 12px; width: 100%; }
   
-  /* Step Cards - Stack icon on top for better horizontal space */
+  /* Step Cards - Fix icon positioning on mobile */
   .step-card {
-    padding: 24px 20px;
+    padding: 24px 20px 24px 64px;
   }
   .step-card__icon {
-    position: static;
-    margin-bottom: 16px;
-    width: 40px; height: 40px;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    margin-bottom: 0;
+    width: 34px; height: 34px;
   }
   .step-card__header {
     flex-wrap: wrap;
@@ -969,12 +971,12 @@ select.form-control option {
   
   /* Bridge Card */
   .bridge-card {
-    flex-direction: column;
-    padding: 20px;
-    gap: 12px;
+    flex-direction: row;
+    padding: 20px 16px;
+    gap: 16px;
   }
   .bridge-card::before, .bridge-card::after {
-    left: 40px;
+    left: 38px;
   }
 
   /* Form & Grid */
