@@ -429,6 +429,12 @@
   </style>
 
   <script>
+    // Ép trình duyệt luôn tải từ đầu trang khi refresh
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     const GAS_URL = "https://script.google.com/macros/s/AKfycbyZ1ASlPLs7eM3nZgOWQlKGDSA6bFZPpBlRWzae3WyQJqK9yEz0ksTO0xHyqFj5E7WO/exec"; 
     let checkInterval;
 
