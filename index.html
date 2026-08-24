@@ -401,12 +401,17 @@
       
       <img id="qr-img" src="" alt="Mã QR Thanh Toán" style="max-width:100%; border-radius:8px; margin-bottom:16px;" />
       
-      <div style="background:rgba(40,65,57,0.05); padding:16px; border-radius:8px; text-align:left; font-size:14px; color:#284139; margin-bottom:16px; border: 1px dashed #809076;">
-        <div style="margin-bottom:8px"><strong>Ngân hàng:</strong> MBBank</div>
-        <div style="margin-bottom:8px"><strong>Số tài khoản:</strong> 0362722725</div>
-        <div style="margin-bottom:8px"><strong>Tên tài khoản:</strong> HONG THIEN Y</div>
-        <div style="margin-bottom:8px"><strong>Số tiền:</strong> 4.930.000 VNĐ</div>
-        <div><strong>Nội dung CK:</strong> <strong style="color:#B86830; font-size:18px; user-select: all;" id="qr-order-id">...</strong></div>
+      <div style="background:rgba(40,65,57,0.05); padding:12px; border-radius:8px; text-align:left; font-size:13.5px; color:#284139; margin-bottom:12px; border: 1px dashed #809076;">
+        <div style="margin-bottom:6px"><strong>Ngân hàng:</strong> MBBank - HONG THIEN Y</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; background:#fff; padding:4px 8px; border-radius:4px;">
+          <div><strong>STK:</strong> <span style="font-size:14.5px; font-weight:bold">0362722725</span></div>
+          <button onclick="navigator.clipboard.writeText('0362722725'); this.innerText='Đã copy ✓'; setTimeout(()=>this.innerText='Copy',2000)" style="background:#e0e7e1; border:none; padding:4px 8px; border-radius:4px; font-size:12px; cursor:pointer; font-weight:600; color:#1D4A34">Copy</button>
+        </div>
+        <div style="margin-bottom:6px; padding-left:8px;"><strong>Số tiền:</strong> 4.930.000 VNĐ</div>
+        <div style="display:flex; justify-content:space-between; align-items:center; background:#fff; padding:4px 8px; border-radius:4px;">
+          <div><strong>Nội dung CK:</strong> <strong style="color:#B86830; font-size:16px;" id="qr-order-id">...</strong></div>
+          <button onclick="navigator.clipboard.writeText(document.getElementById('qr-order-id').innerText); this.innerText='Đã copy ✓'; setTimeout(()=>this.innerText='Copy',2000)" style="background:#B86830; border:none; padding:4px 8px; border-radius:4px; font-size:12px; font-weight:bold; cursor:pointer; color:#fff">Copy</button>
+        </div>
       </div>
       
       <div id="qr-status" style="color:#B86830; font-weight:600; font-size:15px; display:flex; align-items:center; justify-content:center; gap:8px;">
